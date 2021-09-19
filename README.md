@@ -1,6 +1,6 @@
-# python-template-repository
+# Graph-Neural-Networks_PyG
 
-本リポジトリはPython 環境のテンプレートリポジトリです。
+グラフニューラルネットワーク（GNNs）のリポジトリです。
 
 ## リポジトリ構成
 
@@ -13,6 +13,19 @@
 ├── docs
 ├── models
 ├── notebooks
+│   ├── 1_Introduction.ipynb
+│   ├── 2_Node_Classification.ipynb
+│   ├── 3_Graph_Classification.ipynb
+│   ├── 4_Scaling_GNNs.ipynb
+│   ├── 5_Point_Cloud_Classification.ipynb
+│   ├── 6_GNN_Explanation.ipynb
+│   ├── Mutagenicity
+│   │   ├── processed
+│   │   └── raw
+│   └── data
+│       ├── GeometricShapes
+│       ├── Planetoid
+│       └── TUDataset
 ├── pyproject.toml
 ├── requirements.txt
 ├── setup.cfg
@@ -33,13 +46,13 @@
 
 ## 環境構築
 
-- Dockderfileがあるホスト側のフォルダへ移動（例：Desktop/python-template-repository）
+- Dockderfileがあるホスト側のフォルダへ移動（例：Desktop/Graph-Neural-Networks_PyG）
 
 ```
-cd Desktop/python-template-repository
+cd Desktop/Graph-Neural-Networks_PyG
 ```
 
-- Dockerによる環境構築（フォルダをマウント：Desktop/python-template-repository）
+- Dockerによる環境構築（フォルダをマウント：Desktop/Graph-Neural-Networks_PyG）
 
 ```
 docker-compose up --build
