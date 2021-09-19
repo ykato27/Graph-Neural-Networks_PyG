@@ -39,7 +39,18 @@ RUN $PYENV_ROOT/plugins/python-build/install.sh
 RUN /usr/local/bin/python-build -v $PYTHON_VERSION $PYTHON_ROOT
 RUN rm -rf $PYENV_ROOT
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip \
+	nb_black
+RUN pip install torch==1.9.0+cpu \
+	torchvision==0.10.0+cpu \
+	torchaudio==0.9.0 \
+	-f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install git+https://github.com/rusty1s/pytorch_geometric.git
+RUN pip install torch-scatter \
+	torch-sparse \
+	torch-cluster \
+	-f https://data.pyg.org/whl/torch-1.9.0+cpu.html
+RUN pip install captum
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
